@@ -1,14 +1,14 @@
 from django.http import HttpResponse
 from django.template import loader
+from django.shortcuts import render
+
 from .models import Question
 
+
 def index(request):
-    
+
     # Get the objects that we want to pass, i.e. the Question's
     latest_question_list = Question.objects.order_by("-pub_date")[:5]
-    
-    # Get the template
-    template = loader.get_template("polls/index.html") # will be searched under polls/template
 
     # Create context dict, to be passed to template
     context = {
@@ -16,7 +16,7 @@ def index(request):
     }
 
     # Return the response with template, also need to pass request argument
-    return HttpResponse(template.render(context, request))
+    return render(request, "polls/index.html", context)
 
 
 
