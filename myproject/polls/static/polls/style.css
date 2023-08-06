@@ -1,0 +1,11 @@
+li a {
+    color: green;
+    font-family: Georgia, monospace;
+}
+
+body {
+    background: green url("images/7467377.jpg") no-repeat;
+    background-size: 500px;
+    border: 2px solid;
+    color: pink;
+}

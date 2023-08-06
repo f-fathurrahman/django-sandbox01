@@ -1,0 +1,9 @@
+Fonts used in this design:
+
+Font: Nunito
+Author: Vernon Adams,Cyreal
+Url: https://fonts.google.com/specimen/Nunito
+
+Font: Chewy
+Author: Sideshow
+Url: https://fonts.google.com/specimen/Chewy
