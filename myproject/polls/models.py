@@ -12,8 +12,10 @@ class Question(models.Model):
         return self.question_text
     
     def was_published_recently(self):
+        now = timezone.now()
         dt = datetime.timedelta(days=1)
-        return self.pub_date >= timezone.now() - dt
+        # check if self.pub_date is within interval [(now - dt), now]
+        return now - dt <= self.pub_date <= now
 
 
 class Choice(models.Model):
